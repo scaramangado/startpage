@@ -1,0 +1,62 @@
+:root {
+    --transistion-time: 0.3s;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Thesis, helvetica, arial, sans-serif;
+}
+
+#header {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    transition: height var(--transistion-time);
+}
+
+#header:empty {
+    height: 0px;
+}
+
+.headElement {
+    margin-right: 30px;
+}
+
+.headElement:last-child {
+    margin-right: 0px;
+}
+
+.speedrundotcom {
+    padding-left: 30px;
+    background: url(img/speedrundotcom.png) no-repeat;
+    background-size: 20px;
+}
+
+.racetime {
+    padding-left: 30px;
+    background: url(img/racetime.png) no-repeat;
+    background-size: 20px;
+}
+
+.frame {
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+    display: flex;
+    border: none;
+    overflow: hidden;
+    transition: height var(--transistion-time);
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}

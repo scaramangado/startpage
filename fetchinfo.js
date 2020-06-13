@@ -14,7 +14,7 @@ function buildSrcString() {
         return "";
     }
 
-    return `<a href="https://www.speedrun.com/runsawaitingverification" target="blank"><span class="speedrundotcom headElement">${unverifiedRuns} unverified runs</span></a>`;
+    return `<a href="https://www.speedrun.com/runsawaitingverification" class="headElement" target="blank"><span class="speedrundotcom">${unverifiedRuns} unverified runs</span></a>`;
 }
 
 function buildRacetimeString() {
@@ -23,7 +23,7 @@ function buildRacetimeString() {
         return "";
     }
 
-    return `<a href="https://racetime.gg/oot" target="blank"><span class="racetime headElement">${unrecordedRaces} unrecorded races</span></a>`;
+    return `<a href="https://racetime.gg/oot" class="headElement" target="blank"><span class="racetime">${unrecordedRaces} unrecorded races</span></a>`;
 }
 
 async function refreshSrc() {

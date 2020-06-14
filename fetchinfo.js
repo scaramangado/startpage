@@ -27,9 +27,18 @@ function buildRacetimeString() {
 }
 
 async function refreshSrc() {
-    let response = await fetch("https://www.speedrun.com/api/v1/runs?status=new&game=76rkv4d8&max=100", { cache: "no-store" });
-    let json = await response.json();
-    unverifiedRuns = json.data.length;
+
+    let mainJson = await (
+        fetch("https://www.speedrun.com/api/v1/runs?status=new&game=j1l9qz1g&max=100", { cache: "no-store" })
+            .then(r => r.json())
+    );
+
+    let extensionsJson = await (
+        fetch("https://www.speedrun.com/api/v1/runs?status=new&game=76rkv4d8&max=100", { cache: "no-store" })
+            .then(r => r.json())
+    );
+
+    unverifiedRuns = mainJson.data.length + extensionsJson.data.length;
     console.log(`${unverifiedRuns} unverified runs found`);
 }
 

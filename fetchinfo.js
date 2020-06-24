@@ -10,7 +10,7 @@ const updateHtmlHeader = async () => {
 };
 
 function buildSrcString() {
-    if (unverifiedRuns === 16) {
+    if (unverifiedRuns === 9) {
         return "";
     }
 
